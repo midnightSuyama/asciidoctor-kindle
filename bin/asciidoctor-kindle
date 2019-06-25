@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'asciidoctor'
+require 'asciidoctor/cli'
+require 'kindlegen'
+
+options = Asciidoctor::Cli::Options.new
+options[:requires]    = ['asciidoctor-kindle']
+options[:output_file] = 'kindle-content.html'
+options.parse! ARGV
+
+invoker = Asciidoctor::Cli::Invoker.new options
+GC.start
+invoker.invoke!
+
+if invoker.code == 0
+  stdout, stderr, status = Kindlegen.run(options[:output_file], '-o', 'kindle-published.mobi')
+  if status == 0
+    puts stdout
+  else
+    $stderr.puts stderr
+  end
+end

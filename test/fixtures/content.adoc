@@ -1,0 +1,12 @@
+= asciidoctor-kindle
+midnightSuyama
+:toc:
+:kindle-uid: org.midnightSuyama.asciidoctor-kindle
+:kindle-description: Asciidoctor extension for converting html to mobi
+:kindle-cover: cover.jpg
+
+== Header
+
+=== SubHeader
+
+Description
