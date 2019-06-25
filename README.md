@@ -1,5 +1,7 @@
 # asciidoctor-kindle
 
+[![Build Status](https://travis-ci.org/midnightSuyama/asciidoctor-kindle.svg?branch=master)](https://travis-ci.org/midnightSuyama/asciidoctor-kindle)
+
 Asciidoctor extension for converting html to mobi
 
 * Fix HTML file (ContentType and StyleType)
