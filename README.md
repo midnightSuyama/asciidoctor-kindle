@@ -25,7 +25,7 @@ or
 ## Document Attributes
 
 * `kindle-uid` - unique-identifier in OPF
-* `kindle-description` - dc:description in OPF
+* `kindle-publisher` - dc:publisher in OPF
 * `kindle-cover` - cover-image in OPF
 
 ## Development

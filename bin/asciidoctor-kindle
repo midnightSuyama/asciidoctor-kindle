@@ -14,7 +14,7 @@ GC.start
 invoker.invoke!
 
 if invoker.code == 0
-  stdout, stderr, status = Kindlegen.run(options[:output_file], '-o', 'kindle-published.mobi')
+  stdout, stderr, status = Kindlegen.run('kindle-package.opf', '-o', 'kindle-published.mobi')
   if status == 0
     puts stdout
   else

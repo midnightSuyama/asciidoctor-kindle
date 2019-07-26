@@ -2,7 +2,7 @@
 midnightSuyama
 :toc:
 :kindle-uid: org.midnightSuyama.asciidoctor-kindle
-:kindle-description: Asciidoctor extension for converting html to mobi
+:kindle-publisher: Publisher
 :kindle-cover: cover.jpg
 
 == Header

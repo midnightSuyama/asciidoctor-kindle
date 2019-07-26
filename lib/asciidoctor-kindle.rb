@@ -36,7 +36,6 @@ class KindlePostprocessor < Extensions::Postprocessor
     uid          = doc.attr('kindle-uid', 'asciidoctor-kindle')
     title        = doc.attr('doctitle')
     creator      = doc.attr('author')
-    description  = doc.attr('kindle-description')
     publisher    = doc.attr('kindle-publisher', doc.attr('author'))
     date         = doc.attr('docdate')
     language     = doc.attr('lang', 'en')
@@ -45,14 +44,14 @@ class KindlePostprocessor < Extensions::Postprocessor
     cover_path   = doc.attr('kindle-cover')
 
     str = %(<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="#{uid}">
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="BookId">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
     <dc:title>#{title}</dc:title>
     <dc:creator>#{creator}</dc:creator>
-    <dc:description>#{description}</dc:description>
     <dc:publisher>#{publisher}</dc:publisher>
     <dc:date>#{date}</dc:date>
     <dc:language>#{language}</dc:language>
+    <dc:identifier id="BookId">#{uid}</dc:identifier>
   </metadata>
   <manifest>
     <item id="content" media-type="text/html" href="#{content_path}" />
